@@ -1,0 +1,1330 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    font-family:
+            Arial,
+            Helvetica,
+            sans-serif;
+
+    color: #111;
+
+    background: #fff;
+}
+
+
+img {
+    display: block;
+
+    max-width: 100%;
+}
+
+
+a {
+    color: inherit;
+}
+
+
+figure {
+    margin: 0;
+}
+
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    min-height: 78px;
+
+    padding: 0 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+            rgba(255,255,255,0.96);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom:
+            1px solid rgba(0,0,0,0.06);
+}
+
+
+.site-logo {
+    font-size: 21px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    letter-spacing: -0.02em;
+}
+
+
+.site-nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.site-nav a {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+            opacity 0.25s ease;
+}
+
+
+.site-nav a:hover {
+    opacity: 0.5;
+}
+
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.eyebrow {
+    margin: 0 0 24px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.28em;
+
+    color: #777;
+}
+
+
+.eyebrow.light {
+    color: #888;
+}
+
+
+
+/* =========================================================
+   HOME HERO
+========================================================= */
+
+.home-hero {
+    min-height:
+            calc(100vh - 78px);
+
+    display: flex;
+
+    align-items: center;
+
+    background: #fff;
+}
+
+
+.home-hero-inner {
+    width: 100%;
+
+    max-width: 1040px;
+
+    margin: 0 auto;
+
+    padding: 100px 6%;
+}
+
+
+.home-hero h1 {
+    margin: 0 0 30px;
+
+    font-size:
+            clamp(72px,8vw,130px);
+
+    line-height: 0.93;
+
+    letter-spacing: -0.065em;
+
+    font-weight: 700;
+}
+
+
+.hero-description {
+    max-width: 720px;
+
+    margin: 0;
+
+    font-size: 19px;
+
+    line-height: 1.65;
+
+    color: #666;
+}
+
+
+.scroll-button {
+    width: 54px;
+
+    height: 54px;
+
+    margin-top: 52px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+            1px solid #ccc;
+
+    border-radius: 50%;
+
+    color: #111;
+
+    font-size: 22px;
+
+    text-decoration: none;
+
+    transition:
+            background 0.3s ease,
+            color 0.3s ease,
+            transform 0.3s ease;
+}
+
+
+.scroll-button:hover {
+    color: white;
+
+    background: #111;
+
+    transform:
+            translateY(4px);
+}
+
+
+
+/* =========================================================
+   WORK
+========================================================= */
+
+.work-section {
+    padding:
+            120px 6%
+            140px;
+
+    background: #f3f3f3;
+}
+
+
+.section-intro {
+    width: 100%;
+
+    max-width: 1320px;
+
+    margin:
+            0 auto 65px;
+}
+
+
+.section-intro h2 {
+    margin:
+            0 0 22px;
+
+    font-size:
+            clamp(56px,6vw,82px);
+
+    line-height: 1;
+
+    letter-spacing: -0.055em;
+}
+
+
+.section-intro > p:last-child {
+    max-width: 540px;
+
+    margin: 0;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #666;
+}
+
+
+
+/* =========================================================
+   PROJECT GRID
+========================================================= */
+
+.project-grid {
+    width: 100%;
+
+    max-width: 1320px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap: 30px;
+}
+
+
+.project-card {
+    position: relative;
+
+    display: block;
+
+    min-height: 400px;
+
+    overflow: hidden;
+
+    background: #111;
+
+    color: #fff;
+
+    text-decoration: none;
+}
+
+
+.project-photography {
+    width:
+            calc(50% - 15px);
+
+    grid-column:
+            1 / -1;
+
+    justify-self: center;
+}
+
+
+
+/* =========================================================
+   NORMAL PROJECT MEDIA
+========================================================= */
+
+.project-media {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    background: #111;
+}
+
+
+.project-media img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+            transform 0.7s ease;
+}
+
+
+.project-card:hover
+.project-media img {
+    transform:
+            scale(1.045);
+}
+
+
+
+/* =========================================================
+   VIDEO CARD — NYC WINTER SEASON PREVIEW
+========================================================= */
+
+.project-video-media {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    background: #080808;
+
+    pointer-events: none;
+}
+
+
+.project-video-media iframe {
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 100%;
+
+    height: 100%;
+
+    min-width: 100%;
+
+    min-height: 100%;
+
+    transform:
+            translate(-50%,-50%) scale(1.02);
+
+    border: 0;
+
+    pointer-events: none;
+}
+
+
+
+/* =========================================================
+   PROJECT OVERLAY
+========================================================= */
+
+.project-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    padding: 34px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    background:
+            linear-gradient(
+                    to top,
+                    rgba(0,0,0,0.78) 0%,
+                    rgba(0,0,0,0.24) 50%,
+                    rgba(0,0,0,0.08) 100%
+            );
+}
+
+
+.project-number {
+    position: relative;
+
+    z-index: 3;
+
+    font-size: 11px;
+
+    letter-spacing: 0.18em;
+
+    color:
+            rgba(255,255,255,0.88);
+}
+
+
+.project-text {
+    position: relative;
+
+    z-index: 3;
+
+    margin-top: auto;
+
+    padding-right: 80px;
+}
+
+
+.project-text h3 {
+    margin:
+            0 0 10px;
+
+    font-size: 36px;
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+}
+
+
+.project-text p {
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color:
+            rgba(255,255,255,0.8);
+}
+
+
+.project-arrow {
+    position: absolute;
+
+    right: 32px;
+
+    bottom: 32px;
+
+    z-index: 4;
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+            1px solid
+            rgba(255,255,255,0.6);
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    transition:
+            transform 0.3s ease,
+            background 0.3s ease,
+            color 0.3s ease;
+}
+
+
+.project-card:hover
+.project-arrow {
+    color: #111;
+
+    background: white;
+
+    transform:
+            translate(3px,-3px);
+}
+
+
+
+/* =========================================================
+   VIDEO PLAY LABEL
+========================================================= */
+
+.project-play {
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    z-index: 4;
+
+    width: 82px;
+
+    height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transform:
+            translate(-50%,-50%);
+
+    border:
+            1px solid
+            rgba(255,255,255,0.55);
+
+    border-radius: 50%;
+
+    color:
+            rgba(255,255,255,0.95);
+
+    background:
+            rgba(0,0,0,0.12);
+
+    backdrop-filter:
+            blur(2px);
+
+    font-size: 11px;
+
+    letter-spacing: 0.18em;
+
+    transition:
+            transform 0.35s ease,
+            background 0.35s ease;
+}
+
+
+.project-card:hover
+.project-play {
+    background:
+            rgba(255,255,255,0.16);
+
+    transform:
+            translate(-50%,-50%)
+            scale(1.07);
+}
+
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-section {
+    max-width: 1320px;
+
+    margin: 0 auto;
+
+    padding:
+            150px 6%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.35fr;
+
+    gap: 100px;
+}
+
+
+.about-heading h2 {
+    margin: 0;
+
+    font-size:
+            clamp(54px,5vw,76px);
+
+    line-height: 1;
+
+    letter-spacing: -0.055em;
+}
+
+
+.about-copy {
+    padding-top: 28px;
+}
+
+
+.about-copy p {
+    max-width: 650px;
+
+    margin:
+            0 0 24px;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    color: #555;
+}
+
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+    padding:
+            130px
+            max(
+                    6%,
+                    calc((100vw - 1320px) / 2)
+            );
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 0.8fr;
+
+    gap: 100px;
+
+    align-items: center;
+
+    background: #111;
+
+    color: white;
+}
+
+
+.contact-heading h2 {
+    margin: 0;
+
+    font-size:
+            clamp(56px,6vw,88px);
+
+    line-height: 0.96;
+
+    letter-spacing: -0.06em;
+}
+
+
+.contact-info p {
+    max-width: 430px;
+
+    margin:
+            0 0 34px;
+
+    color: #aaa;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+.contact-info a {
+    width: fit-content;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 6px;
+
+    border-bottom:
+            1px solid #666;
+
+    color: white;
+
+    font-size: 17px;
+
+    text-decoration: none;
+}
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    padding:
+            34px 6%;
+
+    background: #111;
+
+    border-top:
+            1px solid #2a2a2a;
+
+    text-align: center;
+
+    color: #777;
+}
+
+
+.site-footer p {
+    margin: 0;
+
+    font-size: 13px;
+}
+
+
+
+/* =========================================================
+   INTERNAL PAGE HERO
+========================================================= */
+
+.portfolio-hero {
+    min-height: 400px;
+
+    padding:
+            100px 6%
+            90px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: white;
+}
+
+
+.portfolio-hero h1 {
+    margin:
+            0 0 25px;
+
+    font-size:
+            clamp(68px,7vw,105px);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.06em;
+}
+
+
+.portfolio-hero > p:last-child {
+    max-width: 780px;
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 18px;
+
+    line-height: 1.65;
+}
+
+
+
+/* =========================================================
+   EDITORIAL
+========================================================= */
+
+.editorial-page {
+    background: #f3f3f3;
+}
+
+
+.editorial-gallery {
+    width: 100%;
+
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    padding:
+            90px 6%
+            60px;
+}
+
+
+.editorial-gallery figure {
+    overflow: hidden;
+
+    background: white;
+
+    box-shadow:
+            0 15px 40px
+            rgba(0,0,0,0.055);
+}
+
+
+.editorial-gallery img {
+    width: 100%;
+
+    height: auto;
+}
+
+
+.editorial-full {
+    width:
+            min(900px,100%);
+
+    margin:
+            0 auto 55px;
+}
+
+
+.editorial-spread {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap: 36px;
+
+    margin-bottom: 55px;
+
+    align-items: start;
+}
+
+
+
+/* =========================================================
+   PHOTOGRAPHY
+========================================================= */
+
+.photography-page {
+    background: #f3f3f3;
+}
+
+
+.photography-gallery {
+    width: 100%;
+
+    max-width: 1120px;
+
+    margin: 0 auto;
+
+    padding:
+            85px 30px;
+
+    columns: 2;
+
+    column-gap: 24px;
+}
+
+
+.photography-gallery figure {
+    width: 100%;
+
+    margin:
+            0 0 24px;
+
+    display: inline-block;
+
+    break-inside: avoid;
+
+    overflow: hidden;
+
+    vertical-align: top;
+}
+
+
+.photography-gallery img {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+
+
+/* =========================================================
+   VIDEO PAGE
+========================================================= */
+
+.video-page {
+    background: #f3f3f3;
+}
+
+
+.video-projects {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding:
+            90px 5%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap: 40px;
+}
+
+
+.video-project {
+    overflow: hidden;
+
+    background: white;
+
+    border:
+            1px solid
+            rgba(0,0,0,0.04);
+
+    transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+}
+
+
+.video-project:hover {
+    transform:
+            translateY(-4px);
+
+    box-shadow:
+            0 18px 45px
+            rgba(0,0,0,0.08);
+}
+
+
+
+/* =========================================================
+   VIDEO PLAYER
+========================================================= */
+
+.video-frame {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio:
+            16 / 9;
+
+    overflow: hidden;
+
+    background: #080808;
+}
+
+
+.video-frame iframe {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+    border: 0;
+}
+
+
+
+/* =========================================================
+   VIDEO INFO
+========================================================= */
+
+.video-info {
+    min-height: 180px;
+
+    padding:
+            26px 28px
+            30px;
+}
+
+
+.video-number {
+    display: block;
+
+    margin-bottom: 22px;
+
+    color: #999;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.22em;
+}
+
+
+.video-info h2 {
+    margin:
+            0 0 10px;
+
+    font-size: 25px;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.035em;
+}
+
+
+.video-info p {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+}
+
+
+
+/* =========================================================
+   BACK TO WORK
+========================================================= */
+
+.back-to-work {
+    padding:
+            50px 6%
+            100px;
+
+    text-align: center;
+}
+
+
+.back-to-work a {
+    min-height: 50px;
+
+    padding:
+            0 25px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+            1px solid #aaa;
+
+    border-radius: 999px;
+
+    color: #222;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+            color 0.3s ease,
+            background 0.3s ease,
+            border-color 0.3s ease;
+}
+
+
+.back-to-work a:hover {
+    color: white;
+
+    border-color: #111;
+
+    background: #111;
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .site-header {
+        padding-left: 5%;
+
+        padding-right: 5%;
+    }
+
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .project-photography {
+        width: 100%;
+
+        grid-column: auto;
+    }
+
+
+    .about-section {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .contact-section {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+
+    .video-projects {
+        gap: 28px;
+    }
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        min-height: auto;
+
+        padding-top: 18px;
+
+        padding-bottom: 18px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 16px;
+    }
+
+
+    .site-nav {
+        gap: 18px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .home-hero {
+        min-height: 720px;
+    }
+
+
+    .home-hero-inner {
+        padding-top: 90px;
+
+        padding-bottom: 90px;
+    }
+
+
+    .home-hero h1 {
+        font-size:
+                clamp(58px,18vw,88px);
+    }
+
+
+    .hero-description {
+        font-size: 17px;
+    }
+
+
+    .work-section {
+        padding-top: 85px;
+
+        padding-bottom: 90px;
+    }
+
+
+    .project-card {
+        min-height: 330px;
+    }
+
+
+    .project-overlay {
+        padding: 25px;
+    }
+
+
+    .project-text h3 {
+        font-size: 30px;
+    }
+
+
+    .project-arrow {
+        right: 24px;
+
+        bottom: 24px;
+    }
+
+
+    .project-play {
+        width: 68px;
+
+        height: 68px;
+    }
+
+
+    .about-section {
+        padding-top: 100px;
+
+        padding-bottom: 100px;
+    }
+
+
+    .contact-section {
+        padding-top: 95px;
+
+        padding-bottom: 95px;
+    }
+
+
+    .portfolio-hero {
+        min-height: auto;
+
+        padding-top: 90px;
+
+        padding-bottom: 70px;
+    }
+
+
+    .portfolio-hero h1 {
+        font-size:
+                clamp(58px,17vw,84px);
+    }
+
+
+    .portfolio-hero > p:last-child {
+        font-size: 16px;
+    }
+
+
+    .editorial-gallery {
+        padding-top: 55px;
+    }
+
+
+    .editorial-spread {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        margin-bottom: 28px;
+    }
+
+
+    .editorial-full {
+        margin-bottom: 28px;
+    }
+
+
+    .photography-gallery {
+        columns: 1;
+
+        padding:
+                55px 5%
+                60px;
+    }
+
+
+    .video-projects {
+        grid-template-columns: 1fr;
+
+        padding:
+                55px 5%
+                70px;
+    }
+
+
+    .video-info {
+        min-height: 0;
+    }
+
+
+    .back-to-work {
+        padding-bottom: 75px;
+    }
+}
